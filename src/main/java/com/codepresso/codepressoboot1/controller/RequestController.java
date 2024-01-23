@@ -12,12 +12,14 @@ import java.lang.reflect.Type;
 @RequestMapping(value = "/user")
 public class RequestController {
     @RequestMapping(value = "/post1")
-    public String querry(@RequestParam(name = "name", required = false, defaultValue = "인성") String name, @RequestParam(name = "id", required = true) String id) {
+    public String querry(@RequestParam(name = "name", required = false, defaultValue = "인성") String name,
+                         @RequestParam(name = "id", required = true) String id) {
         return name + "의 아이디는 " + id + "입니다.";
     }
 
     @RequestMapping(value = "/post2/{name}/{id}")
-    public String path(@PathVariable(name = "name") String name, @PathVariable(name = "id") String id) {
+    public String path(@PathVariable(name = "name") String name,
+                       @PathVariable(name = "id") String id) {
         return name + "의 아이디는 " + id + "입니다.";
     }
 }
