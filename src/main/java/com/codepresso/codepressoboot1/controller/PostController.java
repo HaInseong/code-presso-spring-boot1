@@ -1,7 +1,6 @@
 package com.codepresso.codepressoboot1.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -10,22 +9,26 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 @RequestMapping(value = "/post")
 public class PostController {
 
-    @RequestMapping(method = GET)
+//    @RequestMapping(method = GET)
+    @GetMapping
     public String getPost() {
         return "GET /post";
     }
 
-    @RequestMapping(method = POST)
+//    @RequestMapping(method = POST)
+    @PostMapping
     public String savePost() {
         return "POST /post";
     }
 
-    @RequestMapping(method = PUT)
+//    @RequestMapping(method = PUT)
+    @PutMapping
     public String updatePost() {
         return "PUT /post";
     }
 
-    @RequestMapping(method = DELETE)
+//    @RequestMapping(method = DELETE)
+    @DeleteMapping
     public String deletePost() {
         return "DELETE /post";
     }
